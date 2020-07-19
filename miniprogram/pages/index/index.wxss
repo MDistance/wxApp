@@ -1,153 +1,100 @@
-/**index.wxss**/
-
-page {
-  background: #f6f6f6;
+/* pages/homepage/index.wxss */
+page{
+  /* height:100vh;  */
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+}
+.map-box{
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+#myMap{
+  width: 100%;
+  height: 100%; 
 }
 
-.userinfo, .uploader, .tunnel {
-  margin-top: 40rpx;
-  height: 140rpx;
+cover-image,view{
+   position: absolute;
+}
+/* 地图阴影 */
+.map-shadow-top {
   width: 100%;
-  background: #fff;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-left: none;
-  border-right: none;
+  height: 10rpx;
+  top: 0;
+}
+.map-shadow-btm {
+  width: 100%;
+  height: 10rpx;
+  bottom: 0;
+}
+/* 地图控件 */
+.top-tips{
+  position: absolute; 
+  width: 710rpx;
+  height: 108rpx;
+  left: 50%;
+  z-index: 99;
+  transform: translateX(-50%);
+  top: 12rpx;
   display: flex;
   flex-direction: row;
+  background: #fff;
   align-items: center;
-  transition: all 300ms ease;
+  padding-left: 20rpx;
+  font-size: 28rpx;
+  color: #666;
 }
-
-.userinfo {
-  padding-left: 120rpx;
-}
-
-.userinfo-avatar {
-  width: 100rpx;
-  height: 100rpx;
-  margin: 20rpx;
+.top-icon{
+  position:static;
+  width: 74rpx;
+  height: 74rpx;
+  margin-right: 24rpx;
   border-radius: 50%;
-  background-size: cover;
-  background-color: white;
 }
-
-.userinfo-avatar[size] {
-  width: 100rpx;
-}
-
-
-.userinfo-avatar:after {
-  border: none;
-}
-
-.userinfo-nickname {
-  font-size: 32rpx;
-  color: #007aff;
-  background-color: white;
-  background-size: cover;
-  text-align: left;
-  padding-left: 0;
-  margin-left: 10px;
-}
-
-.userinfo-nickname::after {
-  border: none;
-}
-
-.userinfo-nickname-wrapper {
+.top-text{
+  position:static;
   flex: 1;
 }
 
-.uploader, .tunnel {
-  height: auto;
-  padding: 0 0 0 40rpx;
-  flex-direction: column;
-  align-items: flex-start;
-  box-sizing: border-box;
+.map-icon_point{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  margin-top:-40rpx;
+  width:52rpx;
+  height:75rpx;
 }
-
-.uploader-text, .tunnel-text {
-  width: 100%;
-  line-height: 52px;
-  font-size: 34rpx;
-  color: #007aff;
+.map-icon{
+  right:20rpx;
+  width:76rpx;
+  height:76rpx;
 }
-
-.uploader-container {
-  width: 100%;
-  height: 400rpx;
-  padding: 20rpx 20rpx 20rpx 0;
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+.map-icon_msg{
+  bottom: 360rpx;
 }
-
-.uploader-image {
-  width: 100%;
-  height: 360rpx;
+.map-icon_user{
+  bottom: 260rpx;
 }
-
-.tunnel {
-  padding: 0 0 0 40rpx;
+.map-icon_reset{
+  bottom: 160rpx;
 }
-
-.tunnel-text {
-  position: relative;
-  color: #222;
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: space-between;
-  box-sizing: border-box;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.tunnel-text:first-child {
-  border-top: none;
-}
-
-.tunnel-switch {
+.map_text{
   position: absolute;
-  right: 20rpx;
-  top: -2rpx;
-}
-
-.disable {
-  color: #888;
-}
-
-.service {
-  position: fixed;
-  right: 40rpx;
-  bottom: 40rpx;
-  width: 140rpx;
-  height: 140rpx;
-  border-radius: 50%;
-  background: linear-gradient(#007aff, #0063ce);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
-  display: flex;
-  align-content: center;
-  justify-content: center;
-  transition: all 300ms ease;
-}
-
-.service-button {
-  position: absolute;
-  top: 40rpx;
-}
-
-.service:active {
-  box-shadow: none;
-}
-
-.request-text {
-  padding: 20rpx 0;
-  font-size: 24rpx;
-  line-height: 36rpx;
-  word-break: break-all;
-}
+  left: 0;
+  right: 0;
+  bottom: 0px;
+  height: 80px;
+  background: #fff;
+  padding: 0 15px;
+ }
+ text{
+  margin: 5px 0;
+  display: block;
+  font-size:12px;
+ }
+ .h1{
+  margin: 15px 0;
+  font-size:15px;
+ }
